@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./fonts/icomoon.eot?eyf1q2');
+  src:  url('./fonts/icomoon.eot?eyf1q2#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?eyf1q2') format('truetype'),
+    url('./fonts/icomoon.woff?eyf1q2') format('woff'),
+    url('./fonts/icomoon.svg?eyf1q2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon-arrow-left:before {
+  content: "\e909";
+}
+.icon-arrow-right:before {
+  content: "\e90a";
+}
+.icon-cart:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-checkbox:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-minus:before {
+  content: "\e903";
+}
+.icon-plus:before {
+  content: "\e904";
+}
+.icon-search:before {
+  content: "\e905";
+}
+.icon-star:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-close:before {
+  content: "\e900";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product {
+  width: 317px;
+  height: 411px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto 0 auto;
+  padding-top: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.133);
+  border-radius: 8px;
+}
+
+.product__image-wrapper {
+  height: 200px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.product__image {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product__content {
+  padding: 0 24px;
+}
+
+.product__block-rating-and-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__rating {
+  width: 70px;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7E72F2;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 14px;
+  padding: 0 11px;
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+}
+
+.product__about {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.product__category {
+  margin-top: 7px;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.product__button {
+  display: block;
+  padding: 15px 115px;
+  text-align: center;
+  font-size: 12px;
+  background: #7E72F2;
+  color: #FFFFFF;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.product__button:hover {
+  background: #7467eb;
+  transition: .4s;
+}
+
+.pagination {
+  max-width: 590px;
+  height: 40px;
+  margin: 20px auto 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__page-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 50%;
+  background: #EDEDED;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.pagination__page-list {
+  list-style: none;
+  display: flex;
+  margin: 0 15px;
+  padding: 0;
+}
+
+.pagination__back {
+  padding-right: 4px;
+}
+
+.pagination__forward {
+  padding-left: 3px;
+}
+
+.pagination__page-link:hover {
+  background: #7E72F2;
+  color: #FFFFFF;
+}
+
+.pagination__page-link.active {
+  background: #7E72F2;
+  color: #FFFFFF;
 }
